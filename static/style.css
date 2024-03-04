@@ -1,0 +1,164 @@
+body {
+        font-family: courier;
+        background-color: #000000;
+        margin: 20px;
+        padding: 14px 16px;
+      }
+
+    header {
+        font-family: courier;
+        font-size: 30px;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        /* background-color: #000000; */
+    }
+
+    .sect_cent {
+      text-align: center;
+    }
+
+    .sect_left {
+
+      text-align: left;
+      width: 70%;
+      margin: 50px;
+      color: rgb(0, 0, 0);
+      background: url("dotmatrixbody.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .sect_left_white {
+      text-align: left;
+      font-size: 20px;
+      width: 50%;
+      margin: 50px;
+      color: rgb(255, 255, 255);
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .me_img {
+        display: inline-block;
+        font-family: courier;
+        color: rgb(255, 255, 255);
+        margin: 50px;
+        align-items: right;
+
+        }
+        .image{
+            width: 20%;
+            float: left;
+        }
+        .paragraph{
+            width: 80%;
+            font-size: 20px;
+            color: rgb(255, 255, 255);
+            background-color: rgba(0, 0, 0);
+            margin: 10px;
+        }
+      
+      .navbar {
+        overflow: hidden;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+      
+      .navbar a {
+        float: left;
+        font-size: 25px;
+        color: rgb(15, 244, 145);
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      .navbar a:hover, .dropdown:hover .dropbtn {
+        background-color: rgba(0, 0, 0, 1);
+      }
+
+      .dropdown {
+        float: left;
+        overflow: hidden;
+      }
+      
+      .dropdown .dropbtn {
+        font-size: 25px;  
+        border: none;
+        outline: none;
+        color: rgb(15, 244, 145);
+        padding: 14px 16px;
+        background-color: rgba(0, 0, 0, 0.5);
+        /* background-color: inherit; */
+        font-family: inherit;
+        margin: 0;
+      }
+      
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+        z-index: 1;
+      }
+      
+      .dropdown-content a {
+        float: none;
+        color: rgb(15, 244, 145);
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+      
+      .dropdown-content a:hover {
+        background-color: rgba(0, 0, 0, 1);
+      }
+      
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      .footbar {
+        overflow: hidden;
+        background-color: rgba(0, 0, 0, 0.75);
+      }
+      
+      .footbar a {
+        float: left;
+        font-size: 16px;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      .footbar a:hover {
+        background-color: rgba(0, 0, 0, 1);
+      }
+
+      .behind {
+        background: url("books6.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: #000000;
+      }
+
+      .sect_back {
+        background-color: rgba(0, 0, 0, 0.5);
+        font-size: 16px;
+        color: rgb(255, 255, 255);
+      }
+
+
+      .dotMatrixPrint {
+        background: url("dotmatrixbody.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: #000000;
+        font-family: courier;
+        font-size: 15px;
+        color: rgb(0, 0, 0, 0.8);
+        text-align: center;
+        /* text-indent: 20px; */
+        display: block;
+      }

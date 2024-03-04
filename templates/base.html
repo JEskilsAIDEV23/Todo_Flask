@@ -1,11 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../static/style.css">
+        <title>{% block title %}{% endblock %}</title>
+    </head>
+    <body>
+        <nav class="navbar">
+            <code>
+                <a href="/">Home</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Admin
+                    </button>
+                    <div class="dropdown-content">
+                    <a href="/tasks/new">New Task</a>
+                    <a href="/tasks/delete">Delete Tasks marked for deletion</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Status
+                    </button>
+                    <div class="dropdown-content">
+                    <a href="/tasks?status=pending">Pending</a>
+                    <a href="/tasks?status=complete">Complete</a>
+                    <a href="/tasks?status=delete">Delete</a>
+                    </div>
+                </div>
+                <a href="/tasks">List All</a>
+                <a href="/tasks/categories">Categories</a>
+            </code> 
+        </nav>
+        {% block content %} {% endblock %}
+        <footer class="footbar">
+            <code>   
+                <a href="/">Home</a>   
+            </code>     
+        </footer>
+        <p>Copyright master@johan.eskils.dev</p>
+    </body>
+
 </html>

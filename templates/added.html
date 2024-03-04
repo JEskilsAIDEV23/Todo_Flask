@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <body>
+        <article class="me_img">
+            <code>
+            <h1>Task with id: {{ id }} Added Successfully!</h1>
+            
+            <aside class="image">
+                <img src="../static/books3.png" width="100%" alt="a pile of books">
+            </aside>   
+            <section class="paragraph">
+                <p>Task-ID: {{ id }} </p>     
+                <p>Status: {{ status }} </p>
+                <p>Category: {{ category }} </p>
+                <p>Description: {{ description }} </p>                   
+            </section>
+            </code>
+        </article>       
+    </body>
+{% endblock %}

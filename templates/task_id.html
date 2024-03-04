@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<body>
+    <link rel="stylesheet" href="../static/style.css">
+    <article class="behind">
+    <code>
+    <div class="sect_back">
+        <header class="sect_cent">
+            <h4>Task: {{ task['id'] }} is {{ task['status'] }}</h4>     
+        </header>
+        <section class="dotMatrixPrint">
+            <p><a href="{{ url_for('return_task', id=task['id']) }}">Task-ID: {{ task['id'] }}</a></p>
+            <p>Description: {{ task['description'] }}</p>
+            <p>Category: {{ task['category'] }}</p>
+            <p>Status: {{ task['status'] }}</p>
+        </section>
+    </div>
+
+        <section class="sect_cent">
+                <div class="sect_left_white">
+                <h4>Fake a complete or postpone, the choice is yours</h4>
+                    <form action="{{ url_for('search_and_update_post', post_id=task['id']) }}" method="POST">
+                        <div class="form-group">
+                            <label for="description">Description:</label><br>
+                            <textarea name="description" rows="6" cols="20" class="form-control">{{ task['description'] }}</textarea><br>
+                            <label for="category">Category:</label><br>
+                            <input type="text" size=20 name="category" value="{{ task['category'] }}" class="form-control"><br>
+                            <label for="status">Status:</label><br>
+                            <select name="status" class="form-control">
+                                <option value="{{ task['status'] }}">Current Status</option>
+                                <option value="pending">Pending</option>
+                                <option value="complete">Complete</option>
+                                <option value="delete">Delete</option>
+                            </select>
+                            <button type="submit">Update</button>
+                        </div>   
+                    </form> 
+                </div>
+        </section>
+    </code>
+    </article>
+</body>
+{% endblock %}
+
+

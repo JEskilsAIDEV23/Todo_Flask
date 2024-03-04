@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<body>
+        
+        <header class="sect_left_white">
+            <code><h1>Current Task Categories</h1></code>
+        </header>
+        
+        <section class="sect_left_white">
+        <code>     
+            {% for cat in category %}
+            <p> {{ cat }} </p>
+            {% endfor %}
+        </code>   
+        </section>       
+</body>
+{% endblock %}

@@ -1,16 +1,22 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>{% block title %} Welcome to FlaskBlog {% endblock %}</h1>
-    {% for post in posts %}
-        <a href="{{ url_for('post', post_id=post['id']) }}">
-            <h2>{{ post['title'] }}</h2>
-        </a>
-        <span class="badge badge-primary">{{ post['created'] }}</span>
-        <a href="{{ url_for('edit', id=post['id']) }}">
-            <span class="badge badge-warning">Edit</span>
-        </a>
-        <hr>
-    {% endfor %}
+    <body>
+        <header class="behind">
+            <code>
+                <section class="sect_back">
+                    <h1>"Don't Expect Me To Become More Organized!"</h1>             
+                    <h2>End Points<h2>
+                    <p>/</p>
+                    <p>/tasks/id</p>
+                    <p>/tasks?status=complete</p>
+                    <p>/tasks?status=pending</p>
+                    <p>/tasks?status=delete</p>
+
+
+                </section>
+            </code>
+        </header>
+    </body>
 {% endblock %}
 

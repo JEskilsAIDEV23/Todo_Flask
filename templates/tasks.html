@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<body>
+    <link rel="stylesheet" href="../static/style.css">
+    <article class="sect_cent">
+        <code>
+            <header>
+                <code><h4>Sorted and Unsorted Tasks:</h4></code>    
+            </header>
+            {% for task in tasks %}
+            <section class="dotMatrixPrint">
+                <p><a href="/tasks/{{ task['id'] }}">Task-ID: {{ task['id'] }}</a></p>
+                <p>Description: {{ task['description'] }}</p>
+                <p>Category: {{ task['category'] }}</p>
+                <p>Status: {{ task['status'] }}</p>
+            </section>
+            {% endfor %}
+        </code>
+    </article>
+</body>
+{% endblock %}
+
+
+
