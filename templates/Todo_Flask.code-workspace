@@ -2,12 +2,6 @@
 	"folders": [
 		{
 			"path": ".."
-		},
-		{
-			"path": "../../../flask_bloggapp/templates"
-		},
-		{
-			"path": "../../../html_02/form"
 		}
 	],
 	"settings": {
