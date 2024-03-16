@@ -1,1 +1,32 @@
-[]
+[
+    {
+        "id": 666,
+        "description": "Satanic version",
+        "category": "Software",
+        "status": "complete"
+    },
+    {
+        "id": 10,
+        "description": "Computer Games",
+        "category": "Gaming",
+        "status": "pending"
+    },
+    {
+        "id": 8,
+        "description": "Write Code",
+        "category": "Fun",
+        "status": "complete"
+    },
+    {
+        "id": 12,
+        "description": "Read",
+        "category": "Study",
+        "status": "complete"
+    },
+    {
+        "id": 21,
+        "description": "Shop Glasses",
+        "category": "Shopping",
+        "status": "pending"
+    }
+]

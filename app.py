@@ -168,7 +168,7 @@ def search_and_delete():
             if post['status'] == 'delete':
                 del data[n]
                 deleted = True
-                break
+                # break
             n+=1
         # Write back to the JSON file if posts are deleted
         if deleted:
@@ -260,6 +260,36 @@ def return_cat():
         return jsonify({"error": "File not found"}), 404
     except json.JSONDecodeError:
         return jsonify({"error": "JSON decoding error"}), 500
+
+@app.route("/tasks/search", methods=["GET", "POST"])
+def search_id():
+
+    if request.method == "POST":
+        try:
+            id = request.form.get("id", "")
+            return redirect(url_for('return_task', id=id))
+        except:
+            return f"invalid task id: {id}"
+
+@app.route("/tasks/cat", methods=["GET", "POST"])
+def search_cat():
+
+    if request.method == "POST":
+        try:
+            category = request.form.get("category", "")
+            with open('tasks.json', 'r') as file:
+                data = json.load(file)
+            search = []
+            for post in data:
+                if post['category'] == category:
+                    search.append(post) 
+            if search != []:
+                return render_template('tasks.html', tasks=search)
+            else:
+                return f"invalid category: {category}"
+
+        except:
+            return f"invalid category: {category}"
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <body>
+        <header class="behind"></header>
+            <code>
+                {% for task in tasks %}
+                <section class="sect_back">
+                    <p>Task-ID {{  task[id]  }}</p>
+                    <p>Category: {{  task['category']  }}</p>
+                    <p>Status: {{  task['status']  }}</p>   
+                    <p>Description: {{  task['description']  }}</p>   
+                </section>
+                {% endfor %}
+            </code>
+        
+    </body>
+{% endblock %}
